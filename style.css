@@ -1,0 +1,605 @@
+html {
+    height: 100%;
+    width: 100%;
+    margin: 0%;
+    scroll-behavior: smooth;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* USEFUL STYLE TOOLS */
+  
+  img {
+    border-radius: 5px;
+    width: 250px;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .iframe-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 35px;
+    height: 0;
+    overflow: hidden;
+  }
+  
+  .iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /**
+   * Disable smooth scrolling when users have prefers-reduced-motion enabled
+   */
+  @media screen and (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+  
+  nav {
+    font-family: 'Lora', serif;
+    background-color: rgba(34, 34, 34, 0.5);
+    backdrop-filter: blur(15px);
+    text-align: center;
+  }
+  
+  nav h1 {
+    font-family: 'Lora', serif;
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 0px;
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+  }
+  
+  nav ul li {
+    margin-left: 80px;
+    margin-right: 80px;
+    padding-bottom: 10px;
+  }
+  
+  nav ul a {
+    color: white;
+    font-family: 'Lora', serif;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  nav ul a:hover {
+    background-color: rgba(169, 169, 169, 0.7);
+    color: #c7c7c7;
+    text-decoration: none;
+  }
+  
+  hr {
+    border: none;
+    height: 1px;
+    background-color: #ccc;
+    margin: 20px 0;
+  }
+  
+  button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+    border: none;
+    border-radius: 15px !important;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    color: black;
+    background-color: #ffffff;
+  }
+  
+  .buttons button {
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 20px;
+  }
+  
+  button:hover {
+    background-color: #bababa;
+  }
+  
+  section {
+    border-radius: 10px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  footer {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #222;
+    color: white;
+  }
+  
+  main {
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .service-text {
+    text-align: center;
+    font-size: 15px;
+  }
+  
+  .social-medias {
+    text-align: center;
+    padding-bottom: 15px;
+  }
+  
+  .icons i {
+    margin-right: 30px;
+    margin-left: 30px;
+  }
+  
+  .info h3 {
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+  }
+  
+  .contact-sec {
+    padding-top: 45px;
+    margin-top: 20px;
+  }
+  
+  .division-line {
+    border: 1px solid #333;
+  }
+  
+  .body-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("images/candle-bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: -1;
+    /* Set a negative z-index to place it behind other elements */
+  }
+  
+  .fill {
+    background: linear-gradient(80deg, #f9eadc, #f5d4c4);
+    margin-top: -130px;
+    padding: 20px;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .fill2 {
+    background: linear-gradient(80deg, #f9eadc, #f5d4c4);
+    margin-top: -430px;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .img-chemical-info {
+    margin: 20px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .img-chemical-info p {
+    margin-left: 20px;
+    margin-top: 0px !important;
+  }
+  
+  .card {
+    border: 2px solid #000000 !important;
+    text-align: center;
+    margin: 20px auto;
+    margin-bottom: 20px !important;
+    width: 70%;
+    border-radius: 30px !important;
+  }
+  
+  .card h3 {
+    padding-top: 20px;
+  }
+  
+  .card .fill {
+    margin-bottom: 440px;
+  }
+  
+  main-content {
+    background-color: rgba(34, 34, 34, 0.5);
+    backdrop-filter: blur(15px);
+    position: relative;
+    z-index: 1;
+  }
+  
+  .divider {
+    height: 100%;
+    margin-top: 0px;
+    background-color: rgba(34, 34, 34, 0.5);
+    backdrop-filter: blur(15px);
+    position: relative;
+    z-index: 2;
+  }
+  
+  .banner {
+    font-family: 'Lora', serif;
+    /* background-image: url("images/candle.png"); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    background-position: center;
+    height: 875px;
+  }
+  
+  .banner::after {
+    content: '';
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+    ;
+  }
+  
+  .bannerText {
+    text-align: center;
+    color: white;
+  }
+  
+  .bannerText h2 {
+    margin-top: 275px
+  }
+  
+  .banner h1 {
+    padding-bottom: 20px;
+  }
+  
+  .banner p {
+    padding-bottom: 20px;
+  }
+  
+  .contactform button {
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px !important;
+  }
+  
+  .contact {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  /* Candles */
+  
+  table {
+    margin-top: 15;
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  table td {
+    padding: 8px 12px;
+  }
+  
+  .buy-container {
+    flex: 0 0 30%;
+    order: 4;
+    margin-top: 30px;
+  
+    border: 1px solid #000000;
+    border-radius: 10px;
+    padding: 20px;
+    padding-bottom: 50px;
+    text-align: center !important;
+  }
+  
+  .vertical-align {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .vertical-align button {
+    border-radius: 50px;
+    margin-bottom: 7px;
+    border: none;
+    color: #000000;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .b1 {
+    background-color: yellow;
+  }
+  
+  .b1:hover {
+    background-color: #ffe540;
+  }
+  
+  .b2 {
+    background-color: orange;
+  }
+  
+  .b2:hover {
+    background-color: #db9200;
+  }
+  
+  .candle {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .candle img {
+    flex: 0 0 30%;
+    margin-right: 25px;
+    order: 1;
+  }
+  
+  .text-container {
+    flex: 1;
+    margin: 0 20px;
+    order: 2;
+  }
+  
+  .text-container hr {
+    border: none;
+    height: 1px;
+    background-color: #ccc;
+    margin: 10px 0;
+  }
+  
+  .text-container h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .text-container h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  
+  .text-container2 {
+    text-align: center;
+    flex: 0 0 100%;
+    order: 4;
+    margin-top: 30px;
+  }
+  
+  .text-container2 p {
+    text-align: left;
+  }
+  
+  .text-container2 h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  
+  /* Pop-up overlay */
+  
+  .candle1 {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: 0, 0, 0, 0.6;
+    z-index: 998;
+  }
+  
+  .candle2 {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: 0, 0, 0, 0.6;
+    z-index: 998;
+  }
+  
+  .candle3 {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: 0, 0, 0, 0.6;
+    z-index: 998;
+  }
+  
+  .ingredients-list-prompt {
+    color: white;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #222;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+  }
+  
+  .ingredients-list-prompt h3 {
+    text-align: center;
+  }
+  
+  .ingredients-list-prompt ul {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+  .ingredients-list-prompt button {
+    display: block;
+    margin: 10px auto;
+  }
+  
+  /* Home */
+  
+  /* .home-section {} */
+  
+  .home-section h1 {
+    text-align: center;
+  }
+  
+  .home-section {
+    padding-bottom: 20px;
+  }
+  
+  .services {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .services .s1 {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
+  
+  .services h1 {
+    text-align: center;
+  }
+  
+  .service-bubble {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 100px;
+    margin-left: 100px;
+  }
+  
+  .service-bubble h3 {
+    text-align: center;
+  }
+  
+  /* Medium devices (tablets) */
+  @media only screen and (max-width: 768px) {
+    nav ul li {
+      margin-left: 40px;
+      margin-right: 40px;
+    }
+  
+    .service-bubble,
+    button {
+      margin-right: 50px;
+      margin-left: 50px;
+    }
+  
+    .buttons button {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  
+    .banner {
+      height: 600px;
+    }
+  
+    .buy-container,
+    .vertical-align button {
+      padding: 10px;
+    }
+  }
+  
+  /* Small devices (phones) */
+  @media only screen and (max-width: 480px) {
+  
+  
+    .banner {
+      /* Adjust or remove the following line based on your needs */
+      /* background-image: none; */
+      height: 475px;
+    }
+  
+    .banner2 {
+      /* Adjust or remove the following line based on your needs */
+      /* background-image: none; */
+      height: 625px !important;
+    }
+  
+    .service-text {
+      text-align: center;
+      font-size: 12px;
+    }
+  
+    .img-chemical-info {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .img-chemical-info p {
+      margin-top: 20px !important;
+    }
+  
+    button {
+      margin-left: 20px;
+      margin-right: 20px;
+      padding: 5px 10px;
+    }
+  
+    .buy-container {
+      flex: 0 0 100%;
+      padding: 15px;
+      margin-top: 20px;
+    }
+  
+    .candle img {
+      flex: 0 0 100%;
+      margin-right: 0;
+    }
+  
+    .service-bubble {
+      margin-right: 20px;
+      margin-left: 20px;
+    }
+  
+    .buttons button {
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+  
+    .bannerText h2 {
+      margin-top: 50px;
+    }
+  
+    .divider {
+      margin-top: 225px;
+    }
+  
+    .card {
+      width: 90%;
+    }
+  
+    .ingredients-list-prompt {
+      width: 80%;
+    }
+  
+    .ingredients-list-prompt button {
+      display: block;
+      margin: 10px auto;
+    }
+  
+  }
